@@ -1,8 +1,5 @@
 import re
 
-# Hex code for a color
-txt = "#FF6600"
-
 def checkForMatchAndPrint(regexResult):
   if (regexResult):
     print("We have a match")
@@ -15,11 +12,11 @@ def checkForMatchAndPrint(regexResult):
 # ? - match zero or one time
 # * - match zero or more times
 # + - match one or more times
-x = re.match("#[ABCDEF0123456789]+", txt)
+x = re.match("#[ABCDEF0123456789]+", "#FF6600")
 checkForMatchAndPrint(x)
 
 # for sequential characters we can group them with the '-' character
-x = re.match("#[A-F0-9]+", txt)
+x = re.match("#[A-F0-9]+", "#FF6600")
 checkForMatchAndPrint(x)
 
 # adding a question mark after the # makes it optional (match zero or one time)
